@@ -1,0 +1,99 @@
+﻿
+@{
+    #region Model to View
+
+
+
+    @*@model List<Student>
+
+    @{
+        foreach (var item in Model)
+    {
+        <h1>@item.Id</h1>
+        <h1>@item.FullName</h1>
+        <h1>@item.Age</h1>
+    }
+    }
+
+
+*@
+
+
+    @*@model Student
+
+<h1>@Model.Id</h1>
+<h1>@Model.FullName</h1>
+<h1>@Model.Age</h1>
+<span>@ViewBag.address</span>
+*@
+
+
+    @*@model string
+
+<h1>@Model</h1>
+*@
+
+
+    @*@model List<int>*@
+
+
+    @*<h1>Home</h1>*@
+
+    @*@{
+        foreach (var item in Model)
+       {
+          <h1>@item</h1>
+       }
+    }
+*@
+
+
+
+    @*@{
+    int[] nums = ViewBag.numbers;
+
+    foreach (var item in nums)
+    {
+        <h1>@item</h1>
+    }
+}*@
+
+
+
+    @*
+@{
+    string[] names = (string[])ViewData["names"];
+
+    foreach (var item in names)
+    {
+       <h1>@item</h1>
+    }
+
+}
+
+*@
+
+    #endregion
+
+}
+
+@model HomeVM
+
+@*<ul>
+     @{
+         foreach (var item in Model.Students)
+        {
+            <li>@item.FullName</li>
+        }
+     }
+</ul>*@
+
+<h1>@Model.Product.Name</h1>
+<h1>@Model.Product.Price</h1>
+
+
+
+<main>
+    <h1>Home page</h1>
+</main>
+
